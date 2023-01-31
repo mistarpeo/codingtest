@@ -7,9 +7,9 @@ public class 옹알이 {
     public static int solution(String[] babbling) {
         int answer = 0;
         List<String> def = Arrays.asList("aya", "ye", "woo", "ma");
-        Arrays.stream(babbling).map(x -> x.replaceAll("aya|ye|woo|ma", "")).filter(z -> z.isEmpty()).count()
+        long count = Arrays.stream(babbling).map(x -> x.replaceAll("aya|ye|woo|ma", "")).filter(z -> z.isEmpty()).count();
         System.out.println(count);
-        return count;
+        return (int) count;
     }
     public static void main(String[] args) {
         String[] babbling = {"ayaye","uuuma", "ye", "yemawoo", "ayaa"};
